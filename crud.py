@@ -14,6 +14,12 @@ def create_user(email, password):
     return user
 
 
+def get_user_by_email(email):
+    """Return a user if email exists."""
+    
+    return User.query.filter(User.email == email).first()
+
+
 def get_users():
     """Returns all users."""
 
